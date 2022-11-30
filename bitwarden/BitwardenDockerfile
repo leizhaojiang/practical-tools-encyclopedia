@@ -1,0 +1,16 @@
+version: "3"
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      - LOG_FILE=/data/bitwarden.log
+      - WEBSOCKET_ENABLED=true
+      - TZ=Asia/Shanghai
+      - LC_ALL=zh_CN.UTF-8
+    volumes:
+      - /var/bitwarden/data/:/data/
+    ports:
+      - 8880:80
+      - 3012:3012
