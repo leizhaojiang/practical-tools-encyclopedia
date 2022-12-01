@@ -10,7 +10,7 @@ services:
       - TZ=Asia/Shanghai
       - LC_ALL=zh_CN.UTF-8
     volumes:
-      - /var/bitwarden/data/:/data/
+      - ./bitwarden_data/:/data/
     ports:
       - 8880:80
       - 3012:3012
